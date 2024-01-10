@@ -57,6 +57,11 @@ export const ContainerItens = styled.div`
     text-align: center;
     margin-top: 80px;
   }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 export const Input = styled.input`
@@ -65,7 +70,7 @@ export const Input = styled.input`
   border-radius: 5px;
   background: #fff;
   box-shadow: 3px 3px 10px 0px rgba(74, 144, 226, 0.19);
-  border: none;
+  border: ${props => (props.error ? '3px solid #CC1717' : 'none')};
   padding-left: 10px;
 `
 
@@ -90,4 +95,13 @@ export const SignInLink = styled.p`
     cursor: pointer;
     text-decoration: underline;
   }
+`
+
+export const ErrorMessage = styled.p`
+  color: #cc1717;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2px;
 `
