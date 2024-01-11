@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import * as Yup from 'yup'
 
 import Logo from '../../assets/logo.svg'
@@ -40,12 +41,32 @@ function Register() {
   })
 
   const onSubmit = async clientData => {
-    const response = await apiCodeBurger.post('users', {
-      name: clientData.name,
-      email: clientData.email,
-      password: clientData.password
-    })
-    console.log(response)
+    try {
+      const { status } = await apiCodeBurger.post(
+        'users',
+        {
+          name: clientData.name,
+          email: clientData.email,
+          password: clientData.password
+        },
+        { validateStatus: () => true }
+      )
+
+      if (status === 201 || status === 200) {
+        toast.success('Cadastro realizado com sucesso', {
+          theme: 'colored'
+        })
+      }
+      if (status === 409) {
+        toast.error('E-mail já cadastrada, faça o Login para continuar', {
+          theme: 'colored'
+        })
+      } else {
+        throw new Error()
+      }
+    } catch (err) {
+      toast.error('Falha no sistema! Tente novamamente', { theme: 'colored' })
+    }
   }
 
   return (

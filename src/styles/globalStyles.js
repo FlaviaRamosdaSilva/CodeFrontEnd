@@ -1,3 +1,5 @@
+import 'react-toastify/dist/ReactToastify.css'
+// para Pop-ups em toda aplicação
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`

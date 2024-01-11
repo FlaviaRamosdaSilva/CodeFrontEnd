@@ -14,6 +14,7 @@
 <li>O FrontEnd está sendo desenvolvido em React</li>
 <li>Utilizei ReactDOM, ESlint e Prettier;</li>
 <li>Utilizando Styled Components</li>
+<li>Adicionei a biblioteca React-Toastify para pop-ups de informações/erros<li>
 
 
 ### Previsão de conclusão: 31/01/2024
