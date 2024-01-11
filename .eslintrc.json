@@ -20,7 +20,15 @@
         "prettier"
     ],
     "rules": {
-        "prettier/prettier": "error",
+        "prettier/prettier": [
+            "error",
+            {
+              "singleQuote": true,
+              "parser": "flow"
+            }
+          ]
+        ,
+        "no-extra-semi":"warn",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "no-unused-vars": "warn",

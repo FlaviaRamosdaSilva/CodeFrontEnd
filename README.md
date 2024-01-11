@@ -1,6 +1,6 @@
 # Projeto em desenvolvimento: Code Burger
 
-### Inicio: 27/11/2023
+### Inicio geral do projeto: 27/11/2023
 
 ## o que é:
 <p>Plataforma online para uma Hamburgueria realizar as vendas de seus produtos.</p>
@@ -16,4 +16,4 @@
 <li>Utilizando Styled Components</li>
 
 
-### Previsão de conclusão: 10/01/2024
+### Previsão de conclusão: 31/01/2024

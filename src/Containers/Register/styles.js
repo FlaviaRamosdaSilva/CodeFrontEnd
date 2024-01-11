@@ -11,7 +11,7 @@ export const Container = styled.div`
   justify-content: center;
 `
 
-export const LoginImage = styled.img`
+export const RegisterImage = styled.img`
   height: 80%;
 `
 
@@ -31,7 +31,7 @@ export const ContainerItens = styled.div`
     font-weight: 500;
     line-height: normal;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 17px;
   }
 
   form {
@@ -56,7 +56,7 @@ export const Label = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-top: 28px;
+  margin-top: ${props => (props.error ? '8px' : '19px')};
   margin-bottom: 5px;
 `
 
